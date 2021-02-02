@@ -5,9 +5,7 @@ Variables
 */
 :root {
   --primaryLightColor: #cdd2eb;
-  /* --primaryColor: #052099; */
-  --primaryColor: purple;
-
+  --primaryColor: #052099;
   --primaryHoverColor: lightgray;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
