@@ -85,8 +85,12 @@ Page Backgrounds
   background-repeat: no-repeat;
   padding-bottom: 50px;
 }
+.drinkname-page {
+  background: url("./images/Cocktailbackground4.jpg");
+  background-size: cover;
+}
 .cocktail-section {
-  background: url("./images/Cocktailbackground3.jpg");
+  background-image: url("./images/Cocktailbackground3.jpg");
   background-size: cover;
 }
 /* 
