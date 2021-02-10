@@ -79,10 +79,6 @@ Page Backgrounds
   background-repeat: no-repeat;
   min-height: 800px;
 }
-.drinkname-page {
-  background: url("./images/Cocktailbackground4.jpg");
-  background-size: cover;
-}
 .loader {
   background: inherit;
   background-size: cover;
@@ -92,7 +88,6 @@ Page Backgrounds
 .cocktail-section {
   background: url("./images/Cocktailbackground3.jpg");
   background-size: cover;
-  height: 100vh;
 }
 /* 
 ====== 
