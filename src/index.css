@@ -92,6 +92,7 @@ Page Backgrounds
 .cocktail-section {
   background: url("./images/Cocktailbackground3.jpg");
   background-size: cover;
+  height: 100vh;
 }
 /* 
 ====== 
@@ -161,10 +162,13 @@ Navbar
   height: 7rem;
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
 }
 .nav-center {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  /* justify-content: space-between; */
   align-items: center;
   width: var(--smallWidth);
   margin: 0 auto;
@@ -172,11 +176,13 @@ Navbar
   flex-wrap: wrap;
 }
 .navbar h2 {
-  margin-bottom: 0;
+  margin: 1rem auto;
+  text-align: center;
   color: white;
   padding: 10px;
   border-radius: 5px;
   transition: var(--mainTransition);
+  background-color: rgba(41, 40, 40, 0.5);
 }
 .navbar h2:hover {
   background-color: var(--primaryHoverColor);
@@ -199,11 +205,20 @@ Navbar
   transition: var(--mainTransition);
   color: white;
   border-radius: 15px;
+  background-color: rgba(41, 40, 40, 0.5);
 }
 .nav-links a:hover {
   color: var(--primaryColor);
   background-color: var(--primaryHoverColor);
   border-radius: 15px;
+}
+@media screen and (min-width: 648px) {
+  .nav-center {
+    justify-content: space-between;
+  }
+  .navbar h2 {
+    margin-right: 20px;
+  }
 }
 /* 
 =======
@@ -213,23 +228,39 @@ Welcome
 .welcome-section {
   width: var(--smallWidth);
   max-width: var(--maxWidth);
-  margin: 0 auto;
-  background-color: rgba(41, 40, 40, 0.5);
+  margin: 7rem auto;
+  background-color: rgba(41, 40, 40, 0.8);
   border-radius: 10px;
 }
 .welcome-section h1 {
-  font-size: 4rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
   color: white;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
 }
 .welcome-section p {
   line-height: 2rem;
-  font-size: 2rem;
-  padding: 1rem;
+  font-size: 1rem;
+  padding: 0 1rem 1rem;
   font-weight: 400;
   letter-spacing: 2px;
   color: white;
   text-align: center;
   border-radius: 15px;
+  margin: 0;
+}
+@media screen and (min-width: 780px) {
+  .welcome-section h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  .welcome-section p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
 }
 /* 
 =====
@@ -250,16 +281,17 @@ Cocktails List
 ==============
 */
 
-.section {
-  padding-top: 3rem;
+.cocktail-list {
+  padding-top: 2rem;
 }
-.section-title {
+.cocktail-list .section-title {
   font-size: 2rem;
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
   text-align: center;
-  margin-bottom: 3.5rem;
-  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  color: var(--mainWhite);
 }
 .cocktails-center {
   width: var(--smallWidth);
@@ -319,10 +351,6 @@ CocktailList
 Form
 ====
 */
-.search {
-  /* margin-top: 1rem; */
-  padding-bottom: 0;
-}
 
 .search-form {
   width: var(--smallWidth);
@@ -333,6 +361,10 @@ Form
   text-transform: capitalize;
   border-radius: var(--mainBorderRadius);
   box-shadow: var(--lightShadow);
+}
+
+.form {
+  margin-top: 4rem;
 }
 
 .form-control label {
@@ -365,6 +397,10 @@ CocktailCard
   text-align: center;
   padding-top: 0;
 }
+.single-card-section .btn-primary {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
 .drink {
   width: var(--smallWidth);
   max-width: var(--fullWidth);
@@ -389,12 +425,22 @@ CocktailCard
   border-radius: var(--mainBorderRadius);
   color: var(--primaryColor);
 }
+@media screen and (min-width: 500px) {
+  .drink img {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 992px) {
   .drink {
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 3rem;
     align-items: center;
+  }
+  .drink img {
+    width: 100%;
   }
 }
 
@@ -409,7 +455,7 @@ Loader
   font-size: 20rem;
   text-align: center;
 }
-.section-title {
+.loader .section-title {
   font-size: 2rem;
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);

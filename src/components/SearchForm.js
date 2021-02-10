@@ -18,7 +18,7 @@ const SearchForm = () => {
   };
 
   return (
-    <section className="section">
+    <section className="section form">
       <form className="search-form" onSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="name">Search by cocktail name:</label>
