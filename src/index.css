@@ -77,7 +77,7 @@ Page Backgrounds
   background: url("./images/Cocktails1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 800px;
+  height: 100vh;
 }
 .loader {
   background: inherit;
